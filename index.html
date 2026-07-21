@@ -1,0 +1,210 @@
+<!-- NivelComité — Piloto Auditoría de Trabajo v7 -->
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Piloto — Auditoría de Trabajo · NivelComité</title>
+<meta name="description" content="Auditoría de Trabajo de NivelComité: reviso tu comunicación ejecutiva ante comité (análisis de sensibilidad VAN, TIR y payback, comparativos de CAPEX, casos de negocio de OPEX) y te devuelvo un diagnóstico con los pasos a seguir en máximo 72 horas hábiles." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Georgia&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --black:    #0A0A0A;
+    --ink:      #F5F4F0;
+    --ink-dim:  #9C9B94;
+    --ink-dim2: #6E6D67;
+    --line:     rgba(245,244,240,.12);
+    --line-2:   rgba(245,244,240,.22);
+    --accent:   #B08D57;
+    --copper:   #B5652E;
+    --f:  'Inter', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
+    --fs: Georgia, 'Times New Roman', serif;
+  }
+  * { box-sizing: border-box; }
+  body {
+    background: var(--black); color: var(--ink); font-family: var(--f); font-weight: 300;
+    font-size: 19px; line-height: 1.7; margin: 0; -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 680px; margin: 0 auto; padding: 0 2rem; }
+  header { padding: 2.6rem 0 1.6rem; }
+  .logo { font-family: var(--f); font-weight: 600; font-size: 1rem; letter-spacing: -.01em; color: var(--ink);
+          text-decoration: none; display: inline-flex; flex-direction: column; align-items: flex-start; gap: .34rem;
+          border: 1.5px solid var(--line-2); padding: .55rem 1rem .5rem; }
+  .logo em { font-family: var(--fs); font-style: italic; font-weight: 400; color: var(--copper); }
+  .logo-dash { width: 22px; height: 2px; background: var(--accent); }
+
+  main { padding: 2rem 0 5rem; }
+  .eyebrow { display: block; font-size: .72rem; font-weight: 600; letter-spacing: .2em; text-transform: uppercase;
+             color: var(--accent); margin: 0 0 1.4rem; }
+  .hero-def { font-size: 1.12rem; font-weight: 300; color: var(--ink); max-width: 580px; line-height: 1.7;
+              margin: 0 0 1.8rem; padding-bottom: 1.8rem; border-bottom: 1px solid var(--line);
+              text-align: justify; }
+  h1 { font-family: var(--f); font-weight: 300; font-size: clamp(2rem, 4.6vw, 2.8rem); line-height: 1.18;
+       margin: 0 0 1.4rem; letter-spacing: -.01em; }
+  h1 em { font-family: var(--fs); font-style: italic; font-weight: 400; color: var(--ink); }
+  .hero-sub { font-size: 1.15rem; font-weight: 300; color: var(--ink-dim); max-width: 560px; line-height: 1.7;
+              margin-bottom: 0; text-align: justify; }
+
+  .pull { font-family: var(--fs); font-style: italic; font-weight: 400; font-size: clamp(1.15rem, 2vw, 1.5rem);
+          line-height: 1.45; padding: 1.8rem 0; border-top: 1px solid var(--line-2); border-bottom: 1px solid var(--line-2);
+          margin: 2.6rem 0; color: var(--ink); }
+
+  .sec-label { font-size: .72rem; font-weight: 600; letter-spacing: .24em; text-transform: uppercase;
+               color: var(--ink-dim2); margin: 0 0 1.4rem; }
+  .chk-list { list-style: none; display: flex; flex-direction: column; gap: .8rem; margin: 0 0 2.6rem; padding: 0; }
+  .chk-list li { font-size: 1.02rem; color: var(--ink-dim); display: flex; gap: .9rem; align-items: flex-start;
+                 text-align: justify; }
+  .ck { color: var(--accent); flex-shrink: 0; }
+
+  .cupos { padding: 1.5rem 1.7rem; border: 1px solid var(--line-2); margin-bottom: 2.6rem; }
+  .cupos-n { font-family: var(--fs); font-style: italic; font-size: 1.6rem; color: var(--accent); margin-bottom: .3rem; }
+  .cupos-t { font-size: .95rem; color: var(--ink-dim); text-align: justify; }
+
+  .ask { font-family: var(--fs); font-style: italic; font-size: clamp(1.1rem, 1.9vw, 1.35rem); color: var(--ink);
+         margin-bottom: 2rem; line-height: 1.5; }
+
+  .form-wrap { border-top: 1px solid var(--line); padding-top: 2.2rem; }
+  form { display: flex; flex-direction: column; gap: 1rem; }
+  .row { display: flex; gap: 1rem; flex-wrap: wrap; }
+  .row > * { flex: 1 1 220px; }
+  input, textarea {
+    background: transparent; border: none; border-bottom: 1px solid var(--line-2); color: var(--ink);
+    font-family: var(--f); font-size: 1rem; font-weight: 300; padding: .7rem 0; width: 100%; outline: none;
+  }
+  input::placeholder, textarea::placeholder { color: var(--ink-dim2); }
+  input:focus, textarea:focus { border-bottom-color: var(--accent); }
+  textarea { resize: vertical; }
+  .btn { margin-top: .6rem; background: var(--ink); color: var(--black); border: none; width: 100%;
+         font-family: var(--f); font-size: .92rem; font-weight: 600; letter-spacing: .04em; text-transform: uppercase;
+         padding: 1.05rem 2rem; cursor: pointer; transition: opacity .2s; }
+  .btn:hover { opacity: .85; }
+  .form-note { font-size: .86rem; color: var(--ink-dim2); margin-top: 1rem; line-height: 1.6; text-align: justify; }
+
+  .success { display: none; margin-top: 1.6rem; padding: 1.4rem; border: 1px solid var(--accent); }
+  .success strong { color: var(--ink); }
+  .success span { color: var(--ink-dim); font-size: .95rem; }
+  .success.show { display: block; }
+  form.hide { display: none; }
+
+  footer { padding: 2.2rem 0 3rem; border-top: 1px solid var(--line); text-align: center; }
+  footer p { font-size: .78rem; color: var(--ink-dim2); }
+
+  @media (max-width: 640px) {
+    .wrap { padding: 0 1.4rem; }
+    .row { flex-direction: column; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <span class="logo"><span>Nivel<em>Comité</em></span><span class="logo-dash"></span></span>
+  </div>
+</header>
+
+<main>
+  <div class="wrap">
+    <p class="eyebrow">Auditoría de Trabajo</p>
+    <h1>Mueve la aguja, al nivel que sea.</h1>
+    <p class="hero-def">
+      NivelComité revisa cómo llega tu análisis a la sala donde se decide. Tomo tu presentación o informe para
+      comité y te devuelvo un diagnóstico con los pasos a seguir: dónde quedó enterrada tu conclusión,
+      qué número tienes que tener listo aunque no vaya en la lámina, y en qué orden corregirlo antes de entrar.
+    </p>
+    <p class="hero-sub">
+      +10 años evaluando proyectos de minería, logística y energía industrial.
+      Los análisis que he llevado a comité pasaron con más de 90% de aprobación. Más del 85% de las actividades
+      industriales que preparé para autoridades regionales quedaron aprobadas. Contratos administrados por sobre
+      los USD 10M anuales, con los clientes quedándose. El cuello de botella estuvo casi siempre en el mismo lugar:
+      el tramo entre el análisis terminado y la sala donde se decide.
+    </p>
+
+    <div class="pull">"Lo caro de un comité es el 'lo vemos la próxima'. Mientras das la vuelta, el negocio se mueve y la ventana se la come otro."</div>
+
+    <div class="sec-label">Qué incluye</div>
+    <ul class="chk-list">
+      <li><span class="ck">✓</span><span>Diagnóstico de tu análisis o presentación (VAN, TIR, payback, CAPEX, casos de negocio de OPEX) en máximo 72 horas hábiles</span></li>
+      <li><span class="ck">✓</span><span>Reunión de inicio y reunión de cierre, 30 min aprox. cada una</span></li>
+      <li><span class="ck">✓</span><span>NDA de confidencialidad antes de recibir tu material</span></li>
+      <li><span class="ck">✓</span><span>Correo con instrucciones para comenzar apenas te inscribes</span></li>
+    </ul>
+
+    <div class="cupos">
+      <div class="cupos-n">10 cupos</div>
+      <div class="cupos-t">Atención dedicada, la base para empezar a subir de nivel de verdad.</div>
+    </div>
+
+    <div class="form-wrap">
+      <p class="ask">¿Tu última presentación o informe de decisión en un comité salió con la decisión tomada, o quedaste esperando la próxima reunión?</p>
+
+      <form id="form-piloto">
+        <input type="hidden" name="_subject" value="[NivelComité · Piloto Waitlist] Nueva solicitud" />
+        <input type="hidden" name="form_origen" value="Piloto Waitlist" />
+        <div class="row">
+          <input type="text"  name="nombre" placeholder="Nombre completo" required />
+          <input type="email" name="email"  placeholder="Email personal (recomendado)" required />
+        </div>
+        <div class="row">
+          <input type="text" name="cargo"   placeholder="Cargo actual" />
+          <input type="text" name="empresa" placeholder="Empresa / Industria" />
+        </div>
+        <div class="row">
+          <textarea name="que_no_funciona" rows="3" placeholder="¿Qué tienes entre manos? Análisis de sensibilidad VAN/TIR/payback, comparativo de CAPEX, cuadro comparativo de proveedores, caso de negocio de OPEX, informe para directorio…"></textarea>
+        </div>
+        <button type="submit" class="btn">Quiero mover la aguja →</button>
+      </form>
+
+      <div class="success" id="success-piloto">
+        <strong>Solicitud recibida.</strong><br>
+        <span>Reviso tu caso y te escribo en máx 24 hrs hábiles con el correo de instrucciones para comenzar la Auditoría de Trabajo. Si no ves mi respuesta, revisa spam.</span>
+      </div>
+
+      <p class="form-note">Reviso cada solicitud personalmente. Cupos limitados a los primeros 10 que califiquen.</p>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>© 2026 NivelComité</p>
+  </div>
+</footer>
+
+<script>
+const FORMSPREE_ENDPOINT = 'https://formspree.io/f/mjgqpodz';
+
+function submitToFormspree(form) {
+  const data = new FormData(form);
+  return fetch(FORMSPREE_ENDPOINT, {
+    method: 'POST',
+    body: data,
+    headers: { 'Accept': 'application/json' }
+  }).then(res => {
+    if (!res.ok) throw new Error('Formspree respondió ' + res.status);
+    return res;
+  });
+}
+
+document.getElementById('form-piloto').addEventListener('submit', function(e) {
+  e.preventDefault();
+  const form = e.target;
+  submitToFormspree(form)
+    .then(() => {
+      form.classList.add('hide');
+      document.getElementById('success-piloto').classList.add('show');
+    })
+    .catch(() => {
+      const data = new FormData(form);
+      const params = new URLSearchParams();
+      for (const [k, v] of data.entries()) params.append(k, v);
+      window.location.href = 'mailto:nico.veneg@gmail.com?subject=' +
+        encodeURIComponent('[NivelComité · Piloto Waitlist] Nueva solicitud') +
+        '&body=' + encodeURIComponent(params.toString());
+    });
+});
+</script>
+
+</body>
+</html>
