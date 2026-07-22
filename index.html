@@ -57,6 +57,12 @@
                  text-align: justify; }
   .ck { color: var(--accent); flex-shrink: 0; }
 
+  .sub-label { font-size: .82rem; font-weight: 600; letter-spacing: .04em; color: var(--ink-dim2);
+               margin: .7rem 0 .35rem; }
+  .sub-list { list-style: none; margin: 0; padding-left: 1.1rem; display: flex; flex-direction: column; gap: .4rem; }
+  .sub-list li { font-size: .92rem; color: var(--ink-dim2); position: relative; text-align: justify; }
+  .sub-list li::before { content: "–"; position: absolute; left: -1.1rem; color: var(--accent); }
+
   .cupos { padding: 1.5rem 1.7rem; border: 1px solid var(--line-2); margin-bottom: 2.6rem; }
   .cupos-n { font-family: var(--fs); font-style: italic; font-size: 1.6rem; color: var(--accent); margin-bottom: .3rem; }
   .cupos-t { font-size: .95rem; color: var(--ink-dim); text-align: justify; }
@@ -125,7 +131,15 @@
 
     <div class="sec-label">Qué incluye</div>
     <ul class="chk-list">
-      <li><span class="ck">✓</span><span>Diagnóstico de tu análisis, presentación o informe (modelo de evaluación de proyectos, casos de negocio para mejoras operacionales y/o mantención, decisión sobre proveedores para licitaciones, entre otros) en máximo 72 horas hábiles</span></li>
+      <li><span class="ck">✓</span><span>Diagnóstico escrito con los pasos concretos a corregir antes de entrar a comité o instancia de decisión, en máximo 72 horas hábiles
+        <div class="sub-label">Aplicable a</div>
+        <ul class="sub-list">
+          <li>Modelo de evaluación de proyectos</li>
+          <li>Casos de negocio para mejoras operacionales y/o mantención</li>
+          <li>Decisión sobre proveedores para licitaciones</li>
+          <li>Entre otros</li>
+        </ul>
+      </span></li>
       <li><span class="ck">✓</span><span>Reunión de inicio y reunión de cierre, 30 min aprox. cada una</span></li>
       <li><span class="ck">✓</span><span>NDA de confidencialidad antes de recibir tu material</span></li>
       <li><span class="ck">✓</span><span>Correo con instrucciones para comenzar apenas te inscribes</span></li>
@@ -135,6 +149,8 @@
       <div class="cupos-n">10 cupos</div>
       <div class="cupos-t">Atención dedicada, la base para empezar a subir de nivel de verdad.</div>
     </div>
+
+    <div class="pull">Autoridad ejecutiva para que en 6 semanas tu trabajo te posicione como el referente de tu área, dentro del rol que ya tienes.</div>
 
     <div class="form-wrap">
       <p class="ask">¿Tu última presentación o informe de decisión en un comité salió con la decisión tomada, o quedaste esperando la próxima reunión?</p>
@@ -151,9 +167,9 @@
           <input type="text" name="empresa" placeholder="Empresa / Industria" />
         </div>
         <div class="row">
-          <textarea name="que_no_funciona" rows="3" placeholder="¿Qué tienes entre manos? Análisis de sensibilidad VAN/TIR/payback, comparativo de CAPEX, cuadro comparativo de proveedores, caso de negocio de OPEX, informe para directorio…"></textarea>
+          <textarea name="que_no_funciona" rows="3" placeholder="¿Qué análisis, presentación o informe puede posicionarte como el referente de tu área para subir de nivel? Análisis de sensibilidad VAN/TIR/payback, comparativo de CAPEX, cuadro comparativo de proveedores, caso de negocio de OPEX, informe para directorio…"></textarea>
         </div>
-        <button type="submit" class="btn">Quiero mover la aguja →</button>
+        <button type="submit" class="btn">Quiero subir de nivel →</button>
       </form>
 
       <div class="success" id="success-piloto">
