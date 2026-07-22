@@ -37,13 +37,13 @@
   main { padding: 2rem 0 5rem; }
   .eyebrow { display: block; font-size: .72rem; font-weight: 600; letter-spacing: .2em; text-transform: uppercase;
              color: var(--accent); margin: 0 0 1.4rem; }
-  .hero-def { font-size: 1.12rem; font-weight: 300; color: var(--ink); max-width: 580px; line-height: 1.7;
+  .hero-def { font-size: 1.12rem; font-weight: 300; color: var(--ink); line-height: 1.7;
               margin: 0 0 1.8rem; padding-bottom: 1.8rem; border-bottom: 1px solid var(--line);
               text-align: justify; }
   h1 { font-family: var(--f); font-weight: 300; font-size: clamp(2rem, 4.6vw, 2.8rem); line-height: 1.18;
        margin: 0 0 1.4rem; letter-spacing: -.01em; }
   h1 em { font-family: var(--fs); font-style: italic; font-weight: 400; color: var(--ink); }
-  .hero-sub { font-size: 1.15rem; font-weight: 300; color: var(--ink-dim); max-width: 560px; line-height: 1.7;
+  .hero-sub { font-size: 1.15rem; font-weight: 300; color: var(--ink-dim); line-height: 1.7;
               margin-bottom: 0; text-align: justify; }
 
   .pull { font-family: var(--fs); font-style: italic; font-weight: 400; font-size: clamp(1.15rem, 2vw, 1.5rem);
@@ -63,8 +63,10 @@
   .sub-list li { font-size: .92rem; color: var(--ink-dim2); position: relative; text-align: justify; }
   .sub-list li::before { content: "–"; position: absolute; left: -1.1rem; color: var(--accent); }
 
-  .cupos { padding: 1.5rem 1.7rem; border: 1px solid var(--line-2); margin-bottom: 2.6rem; }
-  .cupos-n { font-family: var(--fs); font-style: italic; font-size: 1.6rem; color: var(--accent); margin-bottom: .3rem; }
+  .cupos { padding: 1.5rem 1.7rem; border: 1px solid var(--line-2); border-left: 3px solid var(--accent);
+           background: rgba(176,141,87,.05); margin-bottom: 2.6rem; }
+  .cupos-n { font-family: var(--fs); font-style: italic; font-size: 1.7rem; letter-spacing: .01em;
+             color: var(--accent); margin-bottom: .3rem; }
   .cupos-t { font-size: .95rem; color: var(--ink-dim); text-align: justify; }
 
   .ask { font-family: var(--fs); font-style: italic; font-size: clamp(1.1rem, 1.9vw, 1.35rem); color: var(--ink);
@@ -137,7 +139,7 @@
           <li>Modelo de evaluación de proyectos</li>
           <li>Casos de negocio para mejoras operacionales y/o mantención</li>
           <li>Decisión sobre proveedores para licitaciones</li>
-          <li>Entre otros</li>
+          <li>Trabajo técnico especializado: lo reviso y vemos juntos el fit para trabajarlo</li>
         </ul>
       </span></li>
       <li><span class="ck">✓</span><span>Reunión de inicio y reunión de cierre, 30 min aprox. cada una</span></li>
@@ -167,7 +169,7 @@
           <input type="text" name="empresa" placeholder="Empresa / Industria" />
         </div>
         <div class="row">
-          <textarea name="que_no_funciona" rows="3" placeholder="¿Qué análisis, presentación o informe puede posicionarte como el referente de tu área para subir de nivel? Análisis de sensibilidad VAN/TIR/payback, comparativo de CAPEX, cuadro comparativo de proveedores, caso de negocio de OPEX, informe para directorio…"></textarea>
+          <textarea name="que_no_funciona" rows="3" placeholder="¿Qué tienes que llevar a comité, y qué es lo que no te está dejando avanzar? Cuéntamelo con tus palabras — análisis, informe, presentación, lo que sea."></textarea>
         </div>
         <button type="submit" class="btn">Quiero subir de nivel →</button>
       </form>
